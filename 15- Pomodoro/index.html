@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h2 class="logo">Pomodoro Timer</h2> -->
+    <div class="option">
+      <ul class="item">
+        <li class="link">
+          <a href="">pomodoro</a>
+        </li>
+        <li class="link">
+          <a href="">short break</a>
+        </li>
+        <li class="link">
+          <a href="">long break</a>
+        </li>
+      </ul>
+    </div>
+    <div class="timebox">
+      <div class="timer">
+        <span id="minute">25</span>:<span id="second">00</span>
+      </div>
+      <div class="controls">
+        <button class="btn btn-start" id="start">
+          <span class="material-icons">play_arrow</span>
+        </button>
+        <button class="btn btn-reset" id="reset">
+          <span class="material-icons">restart_alt</span>
+        </button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span class="icon">⏳</span>
+          <p class="label">Pomos</p>
+          <h2 id="pomos-count">0</h2>
+        </div>
+        <div class="stat-card">
+          <span class="icon">🕒</span>
+          <p class="label">Time</p>
+          <h2><span id="pomos-time">0</span> min</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

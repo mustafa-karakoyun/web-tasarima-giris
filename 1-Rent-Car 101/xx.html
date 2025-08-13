@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Rent A Car</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .features {
+      padding: 50px 0;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #343a40;
+      color: white;
+      transition: all 0.3s;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar-toggler {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1100;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .hover-zoom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Rent A Car</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Araçlar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hakkımızda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">İletişim</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <button class="btn btn-dark sidebar-toggler"  onclick="toggleSidebar()">
+    <i class="bi bi-filter"></i> Filtrele
+  </button>
+  <div class="sidebar" id="sidebar">
+    <h5>Filtreler</h5>
+    <div class="mb-3">
+      <label class="form-label">Marka</label>
+      <select class="form-select">
+        <option>Tümü</option>
+        <option>BMW</option>
+        <option>Mercedes</option>
+        <option>Tesla</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Fiyat Aralığı</label>
+      <input type="range" class="form-range">
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1 class="display-4">Modern Rent A Car</h1>
+    <p class="lead">Hayalindeki arabayı şimdi kirala</p>
+  </section>
+
+  <section class="features container text-center">
+    <div class="row">
+      <div class="col-md-4">
+        <i class="bi bi-speedometer2 fs-1"></i>
+        <h5>Yüksek Performans</h5>
+        <p>Bakımlı ve performanslı araçlar</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-shield-check fs-1"></i>
+        <h5>Güvenli Sürüş</h5>
+        <p>Tam güvenlikli sürüş deneyimi</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-cash-coin fs-1"></i>
+        <h5>Uygun Fiyat</h5>
+        <p>Bütçene uygun kiralama seçenekleri</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card hover-zoom shadow">
+          <img src="img/arac5.jpg" class="card-img-top" alt="BMW">
+          <div class="card-body">
+            <h5 class="card-title">BMW 3.20i</h5>
+            <p class="card-text">Günlük: 1200 TL</p>
+            <a href="#" class="btn btn-success">Kirala</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card hover-zoom shadow">
+          <img src="img/arac3.jpg" class="card-img-top" alt="Mercedes">
+          <div class="card-body">
+            <h5 class="card-title">Mercedes C180</h5>
+            <p class="card-text">Günlük: 1400 TL</p>
+            <a href="#" class="btn btn-success">Kirala</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card hover-zoom shadow">
+          <img src="img/arac4.jpg" class="card-img-top" alt="Tesla">
+          <div class="card-body">
+            <h5 class="card-title">Tesla Model 3</h5>
+            <p class="card-text">Günlük: 1800 TL</p>
+            <a href="#" class="btn btn-success">Kirala</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

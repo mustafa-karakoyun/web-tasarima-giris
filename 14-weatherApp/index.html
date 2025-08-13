@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="card">
+        
+        <!-- Arama Alanı -->
+        <div class="search">
+            <input type="text" placeholder="Şehir giriniz...">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+
+        <!-- Hava Durumu -->
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon" alt="Hava Durumu">
+            <h1>25°C</h1>
+            <h2>İstanbul</h2>
+
+            <!-- Nem ve Rüzgar Detayları -->
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="Nem">
+                    <div>
+                        <p class="nem">50%</p>
+                        <small>NEM</small>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="Rüzgar">
+                    <div>
+                        <p class="ruzgar">15 km/h</p>
+                        <small>RÜZGAR</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

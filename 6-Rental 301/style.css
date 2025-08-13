@@ -1,0 +1,218 @@
+      :root {
+        --primary-color: #f5b754;
+        --backgrond-color: #f9f8f8d3;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--backgrond-color);
+      }
+      /* NAV-HEADER */
+      .logo {
+        font-family: "Syncopate", sans-serif;
+      }
+      nav li {
+        transition: 0.2s all ease;
+        padding: 8px;
+        border-radius: 10px;
+      }
+      nav li:hover {
+        background-color: var(--primary-color);
+      }
+      .header-text {
+        font-family: "Syncopate", sans-serif;
+        font-size: 72px;
+        font-weight: 700;
+        margin: 0 92px 32px;
+      }
+      .highlight {
+        display: block;
+        margin-top: 10px;
+        font-weight: 900;
+      }
+/* CARDS-CONTENT */
+      .section-title {
+        font-family: "Syncopate", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 100px;
+        margin-bottom: 60px;
+      }
+      .card-range {
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-range img {
+        transition: transform 0.3s ease;
+      }
+      .card-range img:hover {
+        transform: scale(1.08);
+      }
+      .card-title {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+      .card-title h5 {
+        font-family: "Syncopate", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .card-title a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .card-title a:hover {
+        color: var(--primary-color);
+      }
+
+      /* MAP-CONTENT */
+      .map h2 {
+        font-family: "Syncopate", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+      }
+      .map button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .map button:hover {
+        background-color: var(--primary-color);
+      }
+      /* CAR-İNFO */
+      .info-card .icon-text {
+        color: gray;
+        font-size: small;
+      }
+      .info-card i {
+        font-size: 35px;
+        margin-top: 4px;
+      }
+      .more-car button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .more-car button:hover,
+      .news button:hover {
+        background-color: var(--primary-color);
+      }
+      .price button:hover {
+        background-color: var(--primary-color);
+      }
+      .cars-title {
+        font-family: "Syncopate", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        margin: 50px;
+      }
+
+      /* NEWS-CONTENT */
+      .marka h2,
+      .news h2 {
+        font-family: "Syncopate", sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 75px;
+      }
+
+      /* SLİDE-LOGO */
+      .brand-logo {
+        width: 120px;
+        height: auto;
+        opacity: 0.8;
+        transition: transform 0.3s ease;
+        margin-right: 20px;
+      }
+      .brand-logo:hover {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+
+      .brand-track {
+        animation: slideBrands 20s linear infinite;
+      }
+      footer a:hover {
+        color: var(--primary-color);
+      }
+
+      .border-custom {
+        border-top: 10px solid var(--primary-color);
+      }
+
+      /* ABOUT */
+      .about {
+        background-color: #f8f9fa;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: #000;
+        
+      }
+
+      .timeline-item {
+        width: 50%;
+        padding: 2rem 1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-item.left {
+        left: 0;
+        text-align: right;
+      }
+
+      .timeline-item.right {
+        left: 50%;
+        text-align: left;
+      }
+
+      .timeline-img {
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-content {
+        background: white;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+
+      @keyframes slideBrands {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }

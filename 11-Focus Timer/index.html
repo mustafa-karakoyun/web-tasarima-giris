@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Pomodoro Timer</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="logo">Focus Timer</h1>
+
+      <div class="mode-selector">
+        <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+        <button class="mode-btn" data-mode="short">Short Break</button>
+        <button class="mode-btn" data-mode="long">Long Break</button>
+      </div>
+
+      <div class="timer-container">
+        <div class="timer-circle">
+          <div class="timer-display">
+            <span id="minute">25</span>
+            <span class="colon">:</span>
+            <span id="second">00</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn btn-start" id="start">
+            <span class="material-icons">play_arrow</span>
+          </button>
+          <button class="control-btn btn-reset" id="reset">
+            <span class="material-icons">refresh</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-icon">🍅</span>
+          <p class="stat-label">Sessions</p>
+          <h2 class="stat-value" id="pomos-count">0</h2>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">⏱️</span>
+          <p class="stat-label">Focus Time</p>
+          <h2 class="stat-value">
+            <span id="pomos-time">0</span
+            ><span style="font-size: 1rem">min</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification" id="notification">
+      <span id="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

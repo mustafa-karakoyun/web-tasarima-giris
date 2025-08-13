@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emlak</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar-custom {
+        background-color: #1a237e;
+      }
+      label {
+        background-color: white;
+        color: black;
+        opacity: 0.7;
+      }
+      .custom {
+        background-color: white;
+        color: black;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-custom navbar-dark py-3 border-bottom border-light"
+      >
+        <div class="container">
+          <a href="#" class="navbar-brand ms-5">EMLAK</a>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Konutlar</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Hakkıımızda</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- FİLTER START -->
+    <div
+      class="bg-image text-center text-white p-5"
+      style="
+        background-image: url('img/s2.jpeg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <ul class="nav nav-tabs justify-content-center my-4">
+        <li class="nav-item">
+          <a href="#" class="nav-link active"> Satılık</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link custom"> Kiralık</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link custom"> Projeler</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link custom"> İlan No</a>
+        </li>
+      </ul>
+
+      <form class="row align-items-end">
+        <div class="col-md-3">
+          <label>Gayrimenkul Tip</label>
+          <select class="form-select">
+            <option>Konut</option>
+            <option>Arsa</option>
+            <option>İşyeri</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Konum Bilgisi</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="il,ilçe,köy,kasaba,mahalle"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label>Oda sayısı</label>
+          <select class="form-select">
+            <option>1+1</option>
+            <option>2+1</option>
+            <option>3+1</option>
+            <option>4+1</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label> Fiyat Bilgisi</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="min - max olarak giriniz"
+          />
+        </div>
+        <div class="col-md-2 gap-2 d-grid">
+          <button type="button" class="btn btn-primary">ARA</button>
+          <button type="button" class="btn btn-outline-primary">
+            HARİTA ARA
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- FİLTER END -->
+
+    <!-- İLAN İÇERİK KARTLAR -->
+    <div class="container">
+      <h2 class="py-3">EV Mİ ARIYORSUN?</h2>
+      <div class="container">
+        <ul class="nav nav-tabs my-4">
+          <li class="nav-item">
+            <a href="#" class="nav-link active"> Öne Çıkan İlanlar</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Fiyatı Düşen Kiralık</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Fiyatı Düşen Satılık</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Jetfırsat</a>
+          </li>
+        </ul>
+
+        <div class="row g-5">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/satılık.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <div class="fw-semibold text-dark small">Satılık 4+1 Ev</div>
+                <p class="text-muted mb-1 small">Müstakil | 4+1 | 200m²</p>
+                <p class="text-muted mb-1 small">İlkadım - Samsun</p>
+                <div class="fw-bold text-primary small">200.000 TL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- REKLAM İLANI -->
+    <div class="container">
+      <img src="img/cyprus-banner.webp" alt="" class="py-5 img-fluid" />
+    </div>
+    <!-- GAYRIMENKUL ÇÖZÜM CARDLARI -->
+    <div class="container">
+      <h2 class="py-3">Gayrimenkul Çözümleri</h2>
+
+      <div class="container my-5">
+        <!-- ARSA CARD -->
+        <div class="card shadow-lg rounded-3 mt-4 p-4">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h4 class="fw-bold">Aradığın arsayı bulamadın mı?</h4>
+              <p class="text-muted">
+                Çözüm net <i class="bi bi-arrow-down"></i>
+              </p>
+              <button class="btn btn-primary mt-2">Detayları Gör</button>
+            </div>
+
+            <div class="col-md-6">
+              <img src="img/arsa.webp" class="img-fluid rounded-3" />
+            </div>
+          </div>
+        </div>
+        <!-- PROJE -->
+        <div class="card shadow-lg rounded-3 p-4  mt-4 ">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="img/proje.webp" class="img-fluid rounded-3" />
+            </div>
+
+            <div class="col-md-6">
+              <h4 class="fw-bold">Ödeme Avantajlı Sıfır Konut Projeleri</h4>
+              <p class="text-muted">
+                Fiyat detaylı ve ödeme avantajlı sıfır konut projeleri Proje
+                Radarı'nda! Tıkla, incele, karşılaştır! Hayalindeki ev senin
+                olsun! <i class="bi bi-arrow-down"></i>
+              </p>
+              <button class="btn btn-primary mt-2">Detayları Gör</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <!-- Yatırım CARD -->
+        <div class="col-md-6">
+          <div class="card p-3 d-flex flex-row align-items-center gap-3">
+            <div
+              style="
+                flex: 0 0 120px;
+                border-right: 1px solid #ccc;
+                padding-right: 15px;
+              "
+            >
+              <img src="img/yatırım.png" alt="" class="img-fluid rounded-3" />
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Emlak Yatırım Uzmanı</h5>
+              <p class="text-muted mb-0" style="font-size: 0.9rem">
+                Emlak Yatırımlarınızda Maksimum Kazanç İçin Çözüm Net: Emlakjet!
+              </p>
+              <button class="btn btn-primary mt-2 rounded">BAŞVUR</button>
+            </div>
+          </div>
+        </div>
+        <!-- Endeksa CARD -->
+        <div class="col-md-6">
+          <div class="card p-3 d-flex flex-row align-items-center gap-3">
+            <div
+              style="
+                flex: 0 0 120px;
+                border-right: 1px solid #ccc;
+                padding-right: 15px;
+              "
+            >
+              <img src="img/endeksa.png" alt="" class="img-fluid rounded-3" />
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Emlak Değerini Öğren!</h5>
+              <p class="text-muted mb-0" style="font-size: 0.9rem">
+                Evinin özelliklerini gir, Endeksa ile hemen değerini öğren.
+              </p>
+              <button class="btn btn-primary mt-2 rounded">HESAPLA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- FOOTER -->
+    <footer class="navbar-custom text-light pt-4 pb-2 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>EMLAK</h2>
+            <p style="font-size: small">
+              Güvenilir, hızlı ve kullanıcı dostu emlak platformunuz. Emlak
+              yatırımlarınızı doğru yönetin.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h6 class="mb-3">Menü</h6>
+            <ul class="list-unstyled" style="font-size: small">
+              <li>
+                <a href="#" class="text-decoration-none text-light"
+                  >Ana Sayfa</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-light">Konutlar</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-light">İletişim</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-light"
+                  >Hakkımızda</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6 class="mb-3">Bizi Takip Edin</h6>
+            <a href="#" class="text-light me-4"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-light "
+              ><i class="bi bi-instagram me-4"></i
+            ></a>
+            <a href="#" class="text-light "><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

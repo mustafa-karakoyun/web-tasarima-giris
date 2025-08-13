@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .content {
+        height: 100vh;
+        background-image: url("img/road.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-shadow: 1px 1px 5px black;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #343a40;
+        color: white;
+        transition: all 0.3s;
+        padding: 20px;
+        z-index: 1000;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+      .sidebar-toggler {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1100;
+      }
+      .card img {
+        height: 300px;
+        object-fit: cover;
+      }
+      .content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      .content p {
+        font-size: 1.5rem;
+        max-width: 600px;
+      }
+      .about img {
+        height: 250px;
+        object-fit: cover;
+      }
+      .about {
+        background-color: #b0b0b0dc;
+      }
+      .about h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand ms-5" href="#">CAR RENTAL</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarM"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarM">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="arac.html">Araçlar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hakkımızda</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- SİDEBAR START -->
+    <button class="btn btn-dark sidebar-toggler" onclick="toggleSidebar()">
+      <i class="bi bi-filter"></i> Filtrele
+    </button>
+    <div class="sidebar" id="sidebar">
+      <h5>Filtrele</h5>
+      <div class="mb-3">
+        <select class="mt-3 form-select rounded">
+          <option>TOYOTA</option>
+          <option>REANAULT</option>
+          <option>HONDA</option>
+          <option>HYUNDAİ</option>
+          <option>BMW</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Şehir"
+          class="mt-3 form-control rounded"
+        />
+        <input
+          type="date"
+          class="mt-3 form-control rounded"
+          placeholder="Tarih"
+        />
+        <input
+          type="number"
+          class="form-control mt-3 rounded"
+          placeholder="Maksimum KM"
+        />
+      </div>
+      <button class="btn btn-light mt-5">Uygula</button>
+    </div>
+    <!-- SİDEBAR END -->
+    <!-- CONTENT START -->
+    <div class="content">
+      <h1>CAR RENTAL</h1>
+      <p>Hayalindeki arabaya kavuşma fırsatı</p>
+    </div>
+    <!-- ARA BÖLÜM -->
+    <section class="features container text-center mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <i class="bi bi-speedometer2 fs-1"></i>
+          <h5>Yüksek Performans</h5>
+          <p>Bakımlı ve performanslı araçlar</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-shield-check fs-1"></i>
+          <h5>Güvenli Sürüş</h5>
+          <p>Tam güvenlikli sürüş deneyimi</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-cash-coin fs-1"></i>
+          <h5>Uygun Fiyat</h5>
+          <p>Bütçene uygun kiralama seçenekleri</p>
+        </div>
+      </div>
+    </section>
+    <!-- POPULER ARAÇLAR -->
+    <div class="container py-5">
+      <h1
+        class="text-center mb-5 fw-bold text-uppercase"
+        style="letter-spacing: 2px"
+      >
+        POPÜLER ARAÇLARIMIZ
+      </h1>
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/arac2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h1>ARAÇ 1</h1>
+              <p>Günlük: 2000 TL</p>
+              <a href="" class="btn btn-success"> Kirala</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/arac2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h1>ARAÇ 2</h1>
+              <p>Günlük: 2000 TL</p>
+              <a href="" class="btn btn-success"> Kirala</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/arac2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h1>ARAÇ 3</h1>
+              <p>Günlük: 2000 TL</p>
+              <a href="" class="btn btn-success"> Kirala</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ŞUBELER -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Şubelerimiz</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-3">
+            <div class="p-3 border rounded shadow-sm bg-white">
+              <h5>İstanbul</h5>
+              <p>Taksim, Büyükçekmece, Ümraniye</p>
+              <a href="#" class="btn btn-success">İletişim</a>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="p-3 border rounded shadow-sm bg-white">
+              <h5>Ankara</h5>
+              <p>Kızılay, Etimesgut, Pursaklar</p>
+              <a href="#" class="btn btn-success">İletişim</a>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="p-3 border rounded shadow-sm bg-white">
+              <h5>Samsun</h5>
+              <p>İlkadım, Atakum, 19 Mayıs</p>
+              <a href="#" class="btn btn-success">İletişim</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTENT END -->
+
+    <!-- HAKKIMIZDA START -->
+    <div class="about">
+      <h1 class="text-center">HAKKIMIZDA</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="img/pexels-photo-164634.jpeg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-8 my-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            nesciunt maxime ratione at sed veniam fuga officiis pariatur? Nisi
+            atque vel eveniet, animi, itaque ullam a quibusdam, reprehenderit
+            voluptates consectetur nobis dicta numquam iste tenetur! Laboriosam
+            porro voluptatibus sit consequuntur perspiciatis odio impedit
+            numquam doloribus explicabo rem, dolorem suscipit sunt!
+            Exercitationem natus ducimus ratione deleniti porro optio, incidunt
+            sit non eaque harum consequuntur soluta vero et ipsum voluptate
+            similique placeat eligendi, libero aliquam ab, dolores sunt fugiat
+            ipsa nam! Magni, laborum! Porro culpa sed, eaque aliquid, quaerat et
+            iure dolores illum autem optio qui repudiandae hic minus commodi
+            ratione nobis!
+          </div>
+
+          <div class="col-md-8 my-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            nesciunt maxime ratione at sed veniam fuga officiis pariatur? Nisi
+            atque vel eveniet, animi, itaque ullam a quibusdam, reprehenderit
+            voluptates consectetur nobis dicta numquam iste tenetur! Laboriosam
+            porro voluptatibus sit consequuntur perspiciatis odio impedit
+            numquam doloribus explicabo rem, dolorem suscipit sunt!
+            Exercitationem natus ducimus ratione deleniti porro optio, incidunt
+            sit non eaque harum consequuntur soluta vero et ipsum voluptate
+            similique placeat eligendi, libero aliquam ab, dolores sunt fugiat
+            ipsa nam! Magni, laborum! Porro culpa sed, eaque aliquid, quaerat et
+            iure dolores illum autem optio qui repudiandae hic minus commodi
+            ratione nobis!
+          </div>
+          <div class="col-md-4 pe-2">
+            <img
+              src="img/anasayfa.webp"
+              alt=""
+              class="img-fluid w-100 rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HAKKIMIZDA END -->
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h5>CAR RENTAL</h5>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium animi voluptatem ad. Rerum, ex dolorum laborum
+              consequuntur labore doloribus eum?
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <h5>İletişim</h5>
+            <p><i class="bi bi-telephone-fill"></i> +90 555 555 55 55</p>
+            <p><i class="bi bi-envelope-fill"></i> car@rental.com</p>
+            <p><i class="bi bi-geo-alt-fill"></i> Samsun, Türkiye</p>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+        <p class="text-center">&copy; 2025 CAR RENTAL. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

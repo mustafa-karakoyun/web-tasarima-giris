@@ -1,0 +1,201 @@
+<!-- rent.html -->
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARAÇ KİRALAMA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-light d-flex justify-content-between align-items-center px-5 pt-5 sticky-top"
+    >
+      <div class="logo">
+        <a href="#" class="text-dark fs-5 fw-bold text-decoration-none"
+          >RENTAL</a
+        >
+      </div>
+
+      <ul class="navbar-nav d-flex flex-row align-items-center mb-0">
+        <li class="nav-item mx-3">
+          <a href="index.html" class="nav-link text-dark">Anasayfa</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="cars.html" class="nav-link text-dark">Araçlar</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="about.html" class="nav-link text-dark">Hakkımızda</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#" class="nav-link text-dark">İletişim</a>
+        </li>
+      </ul>
+
+      <div class="button">
+        <button class="btn" style="background-color: var(--primary-color)">
+          Hemen Kirala
+        </button>
+      </div>
+    </nav>
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="assets/select-4.png"
+            alt="Araç Fotoğrafı"
+            class="img-fluid"
+          />
+          <h2>Ferrari 22990</h2>
+          <p class="text-muted">Konfor, performans ve stil bir arada.</p>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">
+              <i class="bi bi-speedometer2"></i> Maksimum Hız: 240 KM/H
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-gear"></i> Vites: Otomatik
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-fuel-pump"></i> Yakıt: Benzin
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-car-front-fill"></i> Koltuk: 5
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4 class="fw-bold">
+            Günlük Fiyat: <span class="text-danger">250₺</span>
+          </h4>
+
+          <form class="mt-4">
+            <div class="mb-3">
+              <label class="form-label">Adınız</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">E-posta</label>
+              <input type="email" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Telefon Numarası</label>
+              <input type="tel" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ehliyet Numarası</label>
+              <input type="text" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Alış Lokasyonu</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Başlangıç Tarihi</label>
+              <input type="date" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Bitiş Tarihi</label>
+              <input type="date" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-dark w-100">
+              Kiralamayı Tamamla
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5">
+      <div class="container">
+        <h3 class="text-center mb-4">Neden Bizi Tercih Etmelisin?</h3>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <i class="bi bi-shield-check fs-1"></i>
+            <h5 class="mt-2">Full Sigorta</h5>
+            <p>Yolda kalma riskine karşı %100 güvence altındasın.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-clock-history fs-1"></i>
+            <h5 class="mt-2">7/24 Destek</h5>
+            <p>Her an ulaşabileceğin canlı destek hizmeti.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-car-front fs-1"></i>
+            <h5 class="mt-2">Bakımlı Araçlar</h5>
+            <p>Filomuz düzenli bakımdan geçer, hep hazırdır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-light pt-5 pb-3">
+      <div class="container">
+        <div class="row justify-content-between text-center text-md-start">
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Şirket</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Kariyer</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">İletişim</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Yardım</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Araçlar</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Kampanyalar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Sık Sorulanlar</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Takipte Kal</h5>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+        <p class="text-center mb-0">
+          &copy; 2025 Rent A Car. Tüm Hakları Saklıdır.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

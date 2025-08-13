@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RENTAL</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-transparent d-flex justify-content-between align-items-center px-5  sticky-top"
+    >
+      <div class="logo">
+        <a href="#" class="text-dark fs-5 fw-bold text-decoration-none"
+          ><i class="bi bi-car-front-fill me-2"></i>RENTAL</a
+        >
+      </div>
+
+      <ul class="navbar-nav d-flex flex-row align-items-center mb-0">
+        <li class="nav-item mx-3">
+          <a href="index.html" class="nav-link text-dark">Anasayfa</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="cars.html" class="nav-link text-dark">Araçlar</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="about.html" class="nav-link text-dark">Hakkımızda</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="#" class="nav-link text-dark">İletişim</a>
+        </li>
+      </ul>
+
+      <div class="button">
+        <button class="btn" style="background-color: var(--primary-color)">
+          Hemen Kirala
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero-gradient min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="text-white">
+              <h1 class="display-3 fw-bold mb-4">
+                ARAÇ KİRALAMANIN
+                <span class=" d-block">YENİ ADRESİ</span>
+              </h1>
+              <p class="lead mb-4 opacity-75">
+                Güvenilir, hızlı ve ekonomik araç kiralama hizmeti ile hayallerinizdeki yolculuğa çıkın.
+              </p>
+              
+              <!-- Search Form -->
+              <div class="glass-effect rounded-4 p-4 shadow-orange">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label text-white fw-semibold">
+                        <i class="bi bi-geo-alt me-2"></i>Konum
+                      </label>
+                      <input type="text" class="form-control" placeholder="İlkadım, Samsun" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label text-white fw-semibold">
+                        <i class="bi bi-calendar me-2"></i>Alış
+                      </label>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label text-white fw-semibold">
+                        <i class="bi bi-calendar-check me-2"></i>Teslim
+                      </label>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-warning btn-lg w-100">
+                        <i class="bi bi-search me-2"></i>Araç Ara
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/header.png" alt="Modern Car" class="img-fluid floating" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="container">
+        <h2 class="text-center section-title">GENİŞ ARAÇ FİLOMUZ</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4 px-4">
+            <div class="card rounded-5 card-range text-white">
+              <div class="position-relative">
+                <img
+                  src="assets/range-1.jpg"
+                  class="card-img-top rounded-5"
+                  alt="Car 1"
+                />
+                <div class="card-title">
+                  <h5>CARS</h5>
+                  <a href="cars.html"
+                    ><i class="bi bi-arrow-right-circle"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4 px-4">
+            <div class="card rounded-5 card-range text-white">
+              <div class="position-relative">
+                <img
+                  src="assets/range-2.jpg"
+                  class="card-img-top rounded-5"
+                  alt="Car 1"
+                />
+                <div class="card-title">
+                  <h5>SUVS</h5>
+                  <a href="cars.html"
+                    ><i class="bi bi-arrow-right-circle"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4 px-4">
+            <div class="card rounded-5 card-range text-white">
+              <div class="position-relative">
+                <img
+                  src="assets/range-3.jpg"
+                  class="card-img-top rounded-5"
+                  alt="Car 1"
+                />
+                <div class="card-title">
+                  <h5>VANS</h5>
+                  <a href="cars.html"
+                    ><i class="bi bi-arrow-right-circle"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4 px-4">
+            <div class="card rounded-5 card-range text-white">
+              <div class="position-relative">
+                <img
+                  src="assets/range-4.jpg"
+                  class="card-img-top rounded-5"
+                  alt="Car 1"
+                />
+                <div class="card-title">
+                  <h5>ELEKTRİC</h5>
+                  <a href="cars.html"
+                    ><i class="bi bi-arrow-right-circle"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map" style="background: linear-gradient(135deg, #ff6b35, rgb(252, 173, 108));" >
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-7 p-5">
+            <h2>Bulunduğun Konumdaki Araçları Görmek İster misin?</h2>
+            <p class="py-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae repellendus assumenda similique quo eveniet ad, omnis
+              ducimus, debitis a facilis consectetur unde nobis adipisci, ipsam
+              exercitationem aliquid!
+            </p>
+
+            <div class="mb-4">
+              <div class="map-prop d-flex align-items-center bg-white rounded-3 p-3 mb-3 shadow-sm">
+                <i class="bi bi-geo-alt-fill fs-4 text-warning me-3"></i>
+                <span class="fw-medium">Gerçek zamanlı konum</span>
+              </div>
+              <div class="map-prop d-flex align-items-center bg-white rounded-3 p-3 mb-3 shadow-sm">
+                <i class="bi bi-lightning-charge-fill fs-4 text-warning me-3"></i>
+                <span class="fw-medium">Hızlı rezervasyon</span>
+              </div>
+              <div class="map-prop d-flex align-items-center bg-white rounded-3 p-3 shadow-sm">
+                <i class="bi bi-shield-check fs-4 text-warning me-3"></i>
+                <span class="fw-medium">Güvenli ödeme</span>
+              </div>
+            </div>
+
+
+            <a href="#">
+              <button class="btn btn-gradient btn-lg">
+              <i class="bi bi-map me-2"></i>Haritayı Aç
+            </button>
+            </a>
+          </div>
+          <div class="col-md-5 p-5">
+            <img
+              src="assets/map.jpg"
+              alt="Map"
+              class="img-fluid rounded-5 shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+     <section class="py-5 text-white" style="background: linear-gradient(135deg, #ff6b35, #dd5d2e);">
+      <div class="container">
+        <h2 class="cars-title">HAYALİNDEKİ ARACI ŞİMDİ KİRALA</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="glass-effect rounded-4 p-4 hover-lift h-100">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-baseline">
+                  <span class="display-6 fw-bold text-warning">225</span>
+                  <span class="text-muted ms-2">TL/Gün</span>
+                </div>
+                <button class="btn btn-outline-warning">Hemen Kirala</button>
+              </div>
+              <div class="text-center mb-4">
+                <img src="assets/select-4.png" alt="Car 1" class="img-fluid" />
+              </div>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-speedometer2 fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">200</span>
+                      <small class="text-muted">KM/H</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-gear fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">6</span>
+                      <small class="text-muted">Vites</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-people fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">4</span>
+                      <small class="text-muted">Koltuk</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-fuel-pump fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">15</span>
+                      <small class="text-muted">KM/L</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glass-effect rounded-4 p-4 hover-lift h-100">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-baseline">
+                  <span class="display-6 fw-bold text-warning">120</span>
+                  <span class="text-muted ms-2">TL/Gün</span>
+                </div>
+                <button class="btn btn-outline-warning">Hemen Kirala</button>
+              </div>
+              <div class="text-center mb-4">
+                <img src="assets/select-3.png" alt="Car 2" class="img-fluid" />
+              </div>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-speedometer2 fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">180</span>
+                      <small class="text-muted">KM/H</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-gear fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">6</span>
+                      <small class="text-muted">Vites</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-people fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">5</span>
+                      <small class="text-muted">Koltuk</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                    <i class="bi bi-fuel-pump fs-4 text-warning mb-2"></i>
+                    <div>
+                      <span class="fw-bold d-block">20</span>
+                      <small class="text-muted">KM/L</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="cars.html" class="btn btn-outline-warning btn-lg">
+            <i class="bi bi-grid-3x3-gap me-2"></i>DAHA FAZLA ARAÇ GÖRÜNTÜLE
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="marka bg-light py-5 overflow-hidden">
+      <div class="container">
+        <h2>İŞ ORTAKLARIMIZ</h2>
+        <div
+          class="brand-track d-flex align-items-center gap-5"
+          id="brandTrack"
+        >
+          <img src="assets/banner-1.png"  alt="Brand 1" class="brand-logo" />
+          <img src="assets/banner-2.png" alt="Brand 2" class="brand-logo" />
+          <img src="assets/banner-3.png" alt="Brand 3" class="brand-logo" />
+          <img src="assets/banner-4.png" alt="Brand 4" class="brand-logo" />
+          <img src="assets/banner-5.png" alt="Brand 5" class="brand-logo" />
+          <img src="assets/banner-6.png" alt="Brand 6" class="brand-logo" />
+          <img src="assets/banner-7.png" alt="Brand 7" class="brand-logo" />
+          <img src="assets/banner-8.png" alt="Brand 8" class="brand-logo" />
+          <img src="assets/banner-9.png" alt="Brand 9" class="brand-logo" />
+          <img src="assets/banner-10.png" alt="Brand 10" class="brand-logo" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="news  text-light d-flex flex-wrap align-items-center p-4"
+      style="background: linear-gradient(135deg, #212121,#838383 );"
+    >
+      <h2 class="col-md-6 mb-3 mb-md-0">EN SON YENİLİKLERDEN HABERDAR OL</h2>
+      <form
+        class="col-md-6 d-flex justify-content-center align-items-center gap-2"
+      >
+        <input
+          type="text"
+          placeholder="E-posta adresinizi girin"
+          class="form-control form-control-sm w-50"
+        />
+        <button type="submit" class="btn text-light">Abone Ol</button>
+      </form>
+    </section>
+
+    <footer class="text-light pt-5 pb-3" style="background: linear-gradient(135deg, #212121,#838383 );">
+      <div class="container">
+        <div class="row justify-content-between text-center text-md-start">
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Şirket</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Kariyer</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">İletişim</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Yardım</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Araçlar</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Kampanyalar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Sık Sorulanlar</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="mb-3">Takipte Kal</h5>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+        <p class="text-center mb-0">
+          &copy; 2025 Rent A Car. Tüm Hakları Saklıdır.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const track = document.getElementById("brandTrack");
+      track.innerHTML += track.innerHTML;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

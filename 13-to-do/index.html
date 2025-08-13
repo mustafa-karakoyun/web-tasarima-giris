@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url(img/moon.webp) no-repeat center center/cover;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+      }
+      .todo-app {
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .todo-app h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .stat-container {
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+      }
+      .details {
+        width: 100%;
+      }
+      .details h3 {
+        color: #fff;
+      }
+      #progressbar {
+        width: 100%;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        position: relative;
+        margin-top: 10px;
+      }
+      #progress {
+        width: 50%;
+        height: 100%;
+        background-color: rgb(23, 21, 129);
+        border-radius: 20px;
+        transition: width 0.3s ease;
+      }
+      #numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(0, 32, 55, 0.744);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        font-size: 1.5rem;
+      }
+
+      .input-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+      }
+      .input-area input {
+        flex: 1;
+        padding: 10px 17px;
+        border: none;
+        border-radius: 24px;
+        font-size: 1rem;
+        outline: none;
+        /* blue backgorund */
+        background-color: rgba(0, 32, 55, 0.744);
+        color: rgb(212, 252, 233);
+      }
+      .input-area input::placeholder {
+        color: rgb(212, 252, 233);
+      }
+      .input-area button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 24px;
+        background-color: rgba(0, 32, 55, 0.744);
+        color: rgb(212, 252, 233);
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+      }
+      .input-area button:hover {
+        background-color: rgb(0, 32, 55);
+      }
+
+      .todos-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #task-list {
+        width: 100%;
+      }
+
+      #task-list li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        border-radius: 30px;
+        background-color: rgba(0, 32, 55, 0.744);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: rgb(212, 252, 233);
+        position: relative;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+      #task-list li:hover {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+      #task-list li .checkbox {
+        min-width: 20px;
+        height: 20px;
+        border: 2px solid rgb(212, 252, 233);
+        cursor: pointer;
+        border-radius: 50%;
+        background: transparent;
+        transition: all 0.3s ease;
+        appearance: none;
+      }
+      #task-list li .checkbox:checked {
+        background-color: rgb(0, 255, 51);
+        border-color: rgb(0, 230, 65);
+        transform: scale(1.08);
+      }
+      #task-list li .checkbox:checked::before {
+        content: "";
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+      }
+      #task-list li span {
+        flex: 1;
+        margin-left: 8px;
+        word-wrap: break-word;
+      }
+
+      #task-list li.completed {
+        background-color: rgba(0, 123, 119, 0.744);
+        color: rgb(212, 252, 233);
+        text-decoration: line-through;
+      }
+      .task-buttons {
+        margin-right: auto;
+        display: flex;
+        gap: 10px;
+      }
+      .task-buttons button {
+        background: rgba(0, 32, 55, 0.744);
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .task-buttons button:hover {
+        transform: scale(1.1);
+      }
+      .task-buttons .edit-btn {
+        background-color: rgba(0, 123, 119, 0.744);
+      }
+      .task-text {
+        flex: 1 1 100%;
+        margin-left: 8px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+      }
+
+      
+
+      .empty {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        opacity: 0.6;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 0 10px;
+          margin: 0 20px;
+        }
+        .todo-app {
+          gap: 20px;
+          padding: 1.5rem;
+        }
+        #numbers {
+          width: 60px;
+          height: 60px;
+          font-size: 1rem;
+        }
+        .input-area input {
+          font-size: 1rem;
+        }
+
+        
+        #task-list li {
+          font-size: 1rem;
+        }
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h1>To-Do App</h1>
+        <div class="stat-container">
+          <div class="details">
+            <h3>Keep it Up!</h3>
+            <div id="progressbar">
+              <div id="progress"></div>
+            </div>
+          </div>
+          <div class="stats-number">
+            <p id="numbers">0 / 0</p>
+          </div>
+        </div>
+
+        <form class="input-area">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Yeni görev ekleyin..."
+          />
+          <button type="submit" id="add-task-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+        <div class="todos-container">
+          <ul id="task-list"></ul>
+          <img class="empty" src="img/43710.jpg" alt="GörevYok" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* To-Do App JavaScript Code
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        const taskInput = document.getElementById("task-input");
+        const addTaskBtn = document.getElementById("add-task-btn");
+        const taskList = document.getElementById("task-list");
+        const emptyImage = document.querySelector(".empty");
+        const todosContainer = document.querySelector(".todos-container");
+        const progressBar = document.getElementById("progress");
+        const statsNumber = document.getElementById("numbers");
+
+        const toggleEmptyImage = () => {
+          emptyImage.style.display =
+            taskList.children.length === 0 ? "block" : "none";
+          todosContainer.style.width =
+            taskList.children.length > 0 ? "100%" : "50%";
+        };
+
+        const updateProgressBar = (checkCompletion = true) => {
+          const totalTasks = taskList.children.length;
+          const completedTasks =
+            taskList.querySelectorAll(".checkbox:checked").length;
+
+          progressBar.style.width = totalTasks
+            ? `${(completedTasks / totalTasks) * 100}%`
+            : "0%";
+          statsNumber.textContent = `${completedTasks} / ${totalTasks}`;
+          if (
+            checkCompletion &&
+            totalTasks > 0 &&
+            completedTasks === totalTasks
+          ) {
+            Confetti();
+          }
+        };
+
+        const saveTaskToLocalStorage = () => {
+          const tasks = Array.from(taskList.querySelectorAll("li")).map(
+            li => ({
+              text: li.querySelector("span").textContent,
+              completed: li.querySelector(".checkbox").checked,
+            })
+          );
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+        };
+
+        const loadTasksFromLocalStorage = () => {
+          const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+          
+          tasks.forEach(({ text, completed }) => addTask(text, completed, false));
+          toggleEmptyImage();
+          updateProgress();
+        };
+
+        const addTask = (text, completed = false, checkCompletion = true) => {
+          const taskText = text || taskInput.value.trim();
+          if (taskText === "") {
+            alert("Lütfen bir görev girin.");
+            return;
+          }
+
+          const li = document.createElement("li");
+          li.innerHTML = `
+      <input type="checkbox" class="checkbox" ${completed ? "checked" : ""}>
+      <span class="task-text">${taskText}</span> 
+      <div class="task-buttons">
+        <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+      </div>
+    `;
+
+          const checkbox = li.querySelector(".checkbox");
+          const editBtn = li.querySelector(".edit-btn");
+
+          if (completed) {
+            li.classList.add("completed");
+            editBtn.disabled = true;
+            editBtn.style.opacity = 0.5;
+            editBtn.style.pointerEvents = "none";
+          }
+
+          checkbox.addEventListener("change", () => {
+            const isChecked = checkbox.checked;
+            li.classList.toggle("completed", isChecked);
+            editBtn.disabled = isChecked;
+            editBtn.style.opacity = isChecked ? 0.5 : 1;
+            editBtn.style.pointerEvents = isChecked ? "none" : "auto";
+            updateProgressBar();
+            saveTaskToLocalStorage();
+          });
+
+          editBtn.addEventListener("click", () => {
+            if (!checkbox.checked) {
+              taskInput.value = li.querySelector("span").textContent;
+              li.remove();
+              toggleEmptyImage();
+              updateProgressBar(false);
+            }
+          });
+
+          li.querySelector(".delete-btn").addEventListener("click", () => {
+            li.remove();
+            toggleEmptyImage();
+            updateProgressBar();
+            saveTaskToLocalStorage();
+          });
+
+          taskList.appendChild(li);
+          taskInput.value = "";
+          toggleEmptyImage();
+          updateProgressBar(checkCompletion);
+          saveTaskToLocalStorage();
+        };
+
+        addTaskBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          addTask();
+        });
+
+        taskInput.addEventListener("keydown", (event) => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            addTask();
+          }
+        });
+        loadTasksFromLocalStorage();
+      });
+
+      const Confetti = () => {
+        const count = 200,
+          defaults = {
+            origin: { y: 0.7 },
+          };
+
+        function fire(particleRatio, opts) {
+          confetti(
+            Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+            })
+          );
+        }
+
+        fire(0.25, {
+          spread: 26,
+          startVelocity: 55,
+        });
+
+        fire(0.2, {
+          spread: 60,
+        });
+
+        fire(0.35, {
+          spread: 100,
+          decay: 0.91,
+          scalar: 0.8,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 25,
+          decay: 0.92,
+          scalar: 1.2,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 45,
+        });
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
+</html>

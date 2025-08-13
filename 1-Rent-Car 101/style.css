@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER START */
+header {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 8px 12px;
+
+}
+
+nav ul li a:hover {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+/* HEADER END */
+
+/* İÇERİK */
+.content {
+  height: 85vh;
+  background-image: url("img/anasayfa.webp");
+  background-size: cover;
+}
+/* .filter {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}  */
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  background-color: #000000;
+  padding: 20px;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0.7;
+  /* position: relative;
+  animation-name: slideup;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; */
+ 
+}
+@keyframes animasyon {
+  0%   {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+  50%  {background-color:rgb(255, 255, 255); bottom:400px; top:400px;}
+  100% {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(530px);
+  }
+}
+
+@keyframes slideup{
+  0% {
+    opacity: 0;
+    transform: translateY(630px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0px);
+  }
+}
+
+.filter-panel select,
+.filter-panel input,
+.filter-panel button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  
+}
+
+.filter-panel button {
+  background-color: #db0000;
+  color: rgb(255, 253, 253);
+  border: none;
+  cursor: pointer;
+}
+
+.filter-panel button:hover {
+  background-color: #b00000b6;
+  
+}
+
+.filter input {}
+
+/* İÇERİK-ARAÇ */
+
+
+.content-arac {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 50px;
+}
+
+.card {
+  background-color: rgba(34, 33, 33, 0.821);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+
+}
+
+
+.card .image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-right: 30px;
+}
+
+/* HAKKIMIZDA */
+
+
+.content-hakkımızda {
+
+  margin: 50px;
+  padding: 20px;
+  background-color: rgba(83, 83, 83, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-hakkımızda h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.content-hakkımızda p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+
+/* FOOTER START */
+footer {
+  background-color: rgb(0, 0, 0);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.bilgi a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.bilgi a:hover {
+  background-color: gray;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.sosyal i {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.sosyal i:hover {
+  background-color: gray;
+  border-radius: 30%;
+  padding: 6px;
+}
